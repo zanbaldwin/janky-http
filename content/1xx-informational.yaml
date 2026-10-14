@@ -1,0 +1,19 @@
+defaults:
+  tags: ['1xx']
+
+entries:
+  - id: 'http-100'
+    code: 100
+    meaning: 'The client may send the request body: the server has accepted the headers.'
+
+  - id: 'http-101'
+    code: 101
+    meaning: 'The server agrees to change protocol, as the Upgrade header asks (for example to WebSocket).'
+
+  - id: 'http-102'
+    code: 102
+    meaning: 'The server has received a WebDAV request and is still working on it.'
+
+  - id: 'http-103'
+    code: 103
+    meaning: 'The server sends preload Link headers before the final response.'

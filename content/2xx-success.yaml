@@ -1,0 +1,43 @@
+defaults:
+  tags: ['2xx']
+
+entries:
+  - id: 'http-200'
+    code: 200
+    meaning: 'The request succeeded.'
+
+  - id: 'http-201'
+    code: 201
+    meaning: 'The request succeeded and made a new resource.'
+
+  - id: 'http-202'
+    code: 202
+    meaning: 'The server accepted the request for processing, but has not finished it.'
+
+  - id: 'http-203'
+    code: 203
+    meaning: 'A transforming proxy changed the payload of a successful response.'
+
+  - id: 'http-204'
+    code: 204
+    meaning: 'The request succeeded and there is no body to return.'
+
+  - id: 'http-205'
+    code: 205
+    meaning: 'The request succeeded, and the client should reset the document view, for example clear a form.'
+
+  - id: 'http-206'
+    code: 206
+    meaning: 'The server sends only the requested range of the resource.'
+
+  - id: 'http-207'
+    code: 207
+    meaning: 'A WebDAV response that holds separate statuses for several resources.'
+
+  - id: 'http-208'
+    code: 208
+    meaning: 'In a WebDAV multi-status response, the members of this binding were already listed.'
+
+  - id: 'http-226'
+    code: 226
+    meaning: 'The server applied instance manipulations, such as delta encoding, to the response.'

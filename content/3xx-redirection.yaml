@@ -1,0 +1,35 @@
+defaults:
+  tags: ['3xx']
+
+entries:
+  - id: 'http-300'
+    code: 300
+    meaning: 'The resource has more than one representation, and the client should choose one.'
+
+  - id: 'http-301'
+    code: 301
+    meaning: 'The resource has a new permanent URL. Clients may change the method to GET.'
+
+  - id: 'http-302'
+    code: 302
+    meaning: 'The resource is temporarily at another URL. Clients may change the method to GET.'
+
+  - id: 'http-303'
+    code: 303
+    meaning: 'Get the result with a GET request to another URL, for example after a form POST.'
+
+  - id: 'http-304'
+    code: 304
+    meaning: 'The cached copy is still valid, so the server sends no body.'
+
+  - id: 'http-305'
+    code: 305
+    meaning: 'Deprecated: get the resource through the given proxy.'
+
+  - id: 'http-307'
+    code: 307
+    meaning: 'The resource is temporarily at another URL. Repeat the same method and body.'
+
+  - id: 'http-308'
+    code: 308
+    meaning: 'The resource has a new permanent URL. Repeat the same method and body.'

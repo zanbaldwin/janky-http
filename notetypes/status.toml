@@ -1,0 +1,46 @@
+name = "HTTP Status"
+sort_field = "code"
+css = "assets/style.css"
+
+[schema]
+code = { type = "int", required = true }
+phrase = { type = "string" }
+meaning = { type = "string", required = true }
+notes = { type = "markdown" }
+
+[fields.code]
+name = "Code"
+value = "{{ entry.code }}"
+[fields.phrase]
+name = "Phrase"
+value = "{{ entry.phrase or enrich(entry.code | string, 'iana').phrase }}"
+[fields.meaning]
+name = "Meaning"
+[fields.class]
+name = "Class"
+value = "{{ entry.code | status_class }}"
+[fields.response]
+name = "Response"
+value = "{{ entry.code | response(entry.phrase or enrich(entry.code | string, 'iana').phrase) }}"
+[fields.blank]
+name = "Blank"
+value = "{{ entry.code | response }}"
+[fields.reference]
+name = "Reference"
+value = "{% set d = enrich(entry.code | string, 'iana') %}{% if d.url %}<a href=\"{{ d.url }}\">RFC {{ d.rfc }}{% if d.section %}, section {{ d.section }}{% endif %}</a>{% elif d.reference %}{{ d.reference }}{% endif %}{% if d.obsolete %} · obsolete{% endif %}"
+[fields.notes]
+name = "Notes"
+value = "{% if entry.notes %}{{ entry.notes | markdown }}{% endif %}"
+
+[cards.code]
+name = "Code → Phrase"
+front = "cards/status/code.front.html"
+back = "cards/status/code.back.html"
+[cards.phrase]
+name = "Phrase → Code"
+front = "cards/status/phrase.front.html"
+back = "cards/status/phrase.back.html"
+[cards.meaning]
+name = "Meaning → Code"
+front = "cards/status/meaning.front.html"
+back = "cards/status/meaning.back.html"

@@ -1,0 +1,47 @@
+defaults:
+  tags: ['5xx']
+
+entries:
+  - id: 'http-500'
+    code: 500
+    meaning: 'The server met an unexpected condition.'
+
+  - id: 'http-501'
+    code: 501
+    meaning: 'The server does not support the function that the request needs, for example the method.'
+
+  - id: 'http-502'
+    code: 502
+    meaning: 'A gateway or proxy got an invalid response from the upstream server.'
+
+  - id: 'http-503'
+    code: 503
+    meaning: 'The server is temporarily overloaded or down for maintenance.'
+
+  - id: 'http-504'
+    code: 504
+    meaning: 'A gateway or proxy did not get a response from the upstream server in time.'
+
+  - id: 'http-505'
+    code: 505
+    meaning: 'The server does not support the HTTP version of the request.'
+
+  - id: 'http-506'
+    code: 506
+    meaning: 'A content negotiation error: the chosen variant also negotiates.'
+
+  - id: 'http-507'
+    code: 507
+    meaning: 'The server cannot store the representation that the request needs (WebDAV).'
+
+  - id: 'http-508'
+    code: 508
+    meaning: 'The server found an infinite loop while it processed a WebDAV request.'
+
+  - id: 'http-510'
+    code: 510
+    meaning: 'Obsolete: the request needs more extensions before the server can process it.'
+
+  - id: 'http-511'
+    code: 511
+    meaning: 'The client must authenticate to get network access, for example on a captive portal.'

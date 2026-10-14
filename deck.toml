@@ -1,0 +1,49 @@
+[deck]
+name = "HTTP Status Codes"
+output = ".janky/build/http-status-codes.apkg"
+preset = "codes"
+
+[deck.children.informational]
+name = "1xx Informational"
+content = ["content/1xx-informational.yaml"]
+preset = "codes"
+[deck.children.success]
+name = "2xx Success"
+content = ["content/2xx-success.yaml"]
+preset = "codes"
+[deck.children.redirection]
+name = "3xx Redirection"
+content = ["content/3xx-redirection.yaml"]
+preset = "codes"
+[deck.children.client_error]
+name = "4xx Client Error"
+content = ["content/4xx-client-error.yaml"]
+preset = "codes"
+[deck.children.server_error]
+name = "5xx Server Error"
+content = ["content/5xx-server-error.yaml"]
+preset = "codes"
+
+[presets.codes]
+name = "HTTP Status Codes"
+new_per_day = 10
+reviews_per_day = 100
+new_gather_order = "deck"
+new_sort_order = "random-note-then-template"
+desired_retention = 0.9
+learning_steps = ["1m", "10m"]
+bury_new = true
+bury_reviews = true
+bury_interday_learning = true
+
+[notetypes.status]
+path = "notetypes/status.toml"
+default = true
+
+[plugins.response]
+path = "plugins/response.lua"
+
+[plugins.iana]
+path = "plugins/iana.lua"
+[plugins.iana.http]
+allowed_hosts = ["www.iana.org"]

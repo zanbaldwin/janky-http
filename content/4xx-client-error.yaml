@@ -1,0 +1,120 @@
+defaults:
+  tags: ['4xx']
+
+entries:
+  - id: 'http-400'
+    code: 400
+    meaning: 'The server cannot process the request because it is malformed.'
+
+  - id: 'http-401'
+    code: 401
+    meaning: 'The request needs valid authentication credentials.'
+
+  - id: 'http-402'
+    code: 402
+    meaning: 'Reserved for future use. Some services use it for payment or quota problems.'
+
+  - id: 'http-403'
+    code: 403
+    meaning: 'The server understood the request, but refuses to allow it.'
+
+  - id: 'http-404'
+    code: 404
+    meaning: 'The server cannot find the requested resource.'
+
+  - id: 'http-405'
+    code: 405
+    meaning: 'The resource does not support this request method.'
+
+  - id: 'http-406'
+    code: 406
+    meaning: 'The server cannot make a response that matches the Accept headers.'
+
+  - id: 'http-407'
+    code: 407
+    meaning: 'The client must authenticate with the proxy.'
+
+  - id: 'http-408'
+    code: 408
+    meaning: 'The server stopped waiting for the client to finish the request.'
+
+  - id: 'http-409'
+    code: 409
+    meaning: 'The request conflicts with the current state of the resource.'
+
+  - id: 'http-410'
+    code: 410
+    meaning: 'The resource was removed on purpose and will not come back.'
+
+  - id: 'http-411'
+    code: 411
+    meaning: 'The server requires a Content-Length header.'
+
+  - id: 'http-412'
+    code: 412
+    meaning: 'A conditional header, such as If-Match, evaluated to false.'
+
+  - id: 'http-413'
+    code: 413
+    meaning: 'The request body is larger than the server accepts.'
+
+  - id: 'http-414'
+    code: 414
+    meaning: 'The request URI is longer than the server accepts.'
+
+  - id: 'http-415'
+    code: 415
+    meaning: 'The server does not support the format of the request body.'
+
+  - id: 'http-416'
+    code: 416
+    meaning: 'The requested range is outside the resource.'
+
+  - id: 'http-417'
+    code: 417
+    meaning: 'The server cannot meet the Expect header.'
+
+  - id: 'http-418'
+    code: 418
+    phrase: "I'm a teapot"
+    meaning: "An April Fools' joke from RFC 2324. IANA reserves the code so that nobody uses it."
+
+  - id: 'http-421'
+    code: 421
+    meaning: 'The request went to a server that cannot answer for this URI.'
+
+  - id: 'http-422'
+    code: 422
+    meaning: 'The syntax is correct, but the server cannot process the content, for example because of validation errors.'
+
+  - id: 'http-423'
+    code: 423
+    meaning: 'The WebDAV resource is locked.'
+
+  - id: 'http-424'
+    code: 424
+    meaning: 'The request failed because an earlier request that it depends on failed.'
+
+  - id: 'http-425'
+    code: 425
+    meaning: 'The server will not process a request that an attacker could replay (TLS early data).'
+
+  - id: 'http-426'
+    code: 426
+    meaning: 'The client must change to the protocol in the Upgrade header.'
+
+  - id: 'http-428'
+    code: 428
+    meaning: 'The server requires a conditional request, to prevent lost updates.'
+
+  - id: 'http-429'
+    code: 429
+    meaning: 'The client sent too many requests in a given time (rate limiting).'
+
+  - id: 'http-431'
+    code: 431
+    meaning: 'One header, or all the headers together, are too large.'
+
+  - id: 'http-451'
+    code: 451
+    meaning: 'The server refuses the resource because of a legal demand.'
